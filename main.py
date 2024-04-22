@@ -8,7 +8,7 @@ class Convertor(Tk):
         super().__init__()
 
         self.resizable(0, 0)
-        self.title('Convertor')
+        self.title('Conversor')
         self.geometry('+550+250')
 
         self.values = ["Decimal para Binário", "Binário para Decimal", "Decimal para Hexadecimal",
@@ -23,7 +23,7 @@ class Convertor(Tk):
         self.frase_final = StringVar()
         self.frase_resultado = StringVar()
 
-        Label(self, text="Convertor de Números", font=("Comic Sans MS", 30), justify='center').grid(row=0, column=0,
+        Label(self, text="Conversor de Números", font=("Comic Sans MS", 30), justify='center').grid(row=0, column=0,
                                                                                                     sticky="NEWS",
                                                                                                     columnspan=2)
 
@@ -45,6 +45,8 @@ class Convertor(Tk):
             messagebox.showerror('ERROR', 'Escolha uma opção!!')
 
         else:
+
+            self.frase_resultado.set("")
 
             self.label_inicial = Label(self, textvariable=self.frase_inicial, font=('Comic Sans MS', 12))
             self.label_inicial.grid(row=4, column=0)
